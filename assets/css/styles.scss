@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
+$base-color: #d90647;
 $title-color: #363636;
 $p-color: #808080;
 
@@ -49,12 +50,20 @@ ul, li {
         font-size: 5vw;
         font-weight: 700;
         color: $title-color;
+        padding: 1%;
+        letter-spacing: 1.5px;
+
+        span {
+            color: $base-color;
+        }
     }
 
     .section-desc {
         font-size: 2.3vw;
         color: $p-color;
         width: 70%;
+        line-height: 32px;
+        padding: 1%;
     }
     
     .home {
@@ -112,7 +121,16 @@ ul, li {
         text-align: center;
     
         .message-wrapper {
-            
+            margin-top: 100px;
+            position: relative;
+
+            img {
+                &:nth-child(2) {
+                    position: absolute;
+                    left: 40%;
+                    top: 20%;
+                }
+            }
         }
     }
 }

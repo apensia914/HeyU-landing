@@ -42,11 +42,18 @@ ul, li {
     font-size: 5vw;
     font-weight: 700;
     color: #363636;
+    padding: 1%;
+    letter-spacing: 1.5px;
+  }
+  .section-title span {
+    color: #d90647;
   }
   .section-desc {
     font-size: 2.3vw;
     color: #808080;
     width: 70%;
+    line-height: 32px;
+    padding: 1%;
   }
   .home {
     background-image: -webkit-gradient(linear, left bottom, left top, from(#eb402c), to(#d90647));
@@ -105,6 +112,15 @@ ul, li {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
+  }
+  .message .message-wrapper {
+    margin-top: 100px;
+    position: relative;
+  }
+  .message .message-wrapper img:nth-child(2) {
+    position: absolute;
+    left: 40%;
+    top: 20%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
