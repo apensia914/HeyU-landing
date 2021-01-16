@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
+$title-color: #363636;
+$p-color: #808080;
+
 * {
     margin: 0;
     padding: 0;
@@ -21,198 +24,78 @@ ul, li {
 }
 
 .container {
-    max-width: 100%;
+    width: 100%;
     height: 100vh;
 }
 
+
 /* Home Section */
-
-// .home {
-//     position: relative;
-//     background-image: linear-gradient(to top, #eb402c, #d90647);
-
-//     &::before{
-//         content:'';
-//         position: absolute;
-//         bottom: 0;
-//         left: 0;
-//         width: 100%;
-//         height: 200px;
-//         background-color: #fff;
-//         clip-path: polygon(100% 0, 0 100%, 100% 100%);
-//     }
-
-//     .navbar {
-//         width: 100%;
-//         height: 5vh;
-//         display: flex;
-//         align-items: center;
-//         position: absolute;
-//         top: 40px;
-        
-//         .logo {
-//             font-size: 2.5vw;
-//             color: #fff;
-//             font-weight: 700;
-//             margin-right: auto;
-//             margin-left: 3%;
-//         }
+.home {
+    max-width: 100%;
     
-//         .menu {
-//             width: 30%;
-//             display: flex;
-//             justify-content: space-between;
-//             font-size: 1.1vw;
-            
-//             text-transform: uppercase;
-//             margin-right: 3%;
+}
 
-//             a {
-//                 color: #fff;
-//             }
-//         }
-//     }
-
-//     .home-wrapper {
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         height: 95vh;
-//         position: relative;
-//         padding-top: 100px;
-        
-//         .home-content {
-//             position: absolute;
-//             left: 10%;
-    
-//             .home-title {
-//                 color: #fff;
-    
-//                 h1 {
-//                     font-weight: 700;
-//                     font-size: 3.5vw;
-//                     padding-bottom: 20px;
-//                 }
-    
-//                 h2 {
-//                     padding-top: 20px;
-//                     font-weight: 400;
-//                     font-size: 1.2vw;
-//                 }
-//             }
-    
-//             .home-btn {
-//                 margin-top: 100px;
-
-//                 a {
-//                     font-size: 1.1vw;
-//                     text-align: center;
-//                     padding: 15px 50px;
-//                     background-color: #fff;
-//                     border-radius: 25px;
-//                     box-shadow: 0px 10px 40px 0 rgba(54, 54, 54, 0.15);
-//                     color: #d90647;
-//                 }
-//             }
-//         } 
-//         .home-image {
-//             position: absolute;
-//             right: 10%;
-//             top: 25%;
-
-//             img {
-//                 width: 25vw;
-//             }
-//         }   
-//     }
-// }
-
-@media only screen and (max-width: 768px) {
-    .home {
-        position: relative;
-        background-image: linear-gradient(to top, #eb402c, #d90647);
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
         height: 120vh;
-        
-        &::before{
-            content:'';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 200px;
-            background-color: #fff;
-            clip-path: polygon(100% 0, 0 100%, 100% 100%);
-        }
-        
-        .navbar {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            align-items: center;
-            position: relative;
+    }
 
+    .desc-image {
+        width: 40%;
+    }
+
+    .section-title {
+        font-size: 5vw;
+        font-weight: 700;
+        color: $title-color;
+    }
+
+    .section-desc {
+        font-size: 2.3vw;
+        color: $p-color;
+        width: 70%;
+    }
+    
+    .home {
+        background-image: linear-gradient(to top, #eb402c, #d90647);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-self: center;
+        justify-content: center;
+
+        .navbar {
             .logo {
-                padding-top: 5%;
-                font-size: 5vw;
+                font-size: 7vw;
                 font-weight: 700;
                 color: #fff;
             }
 
             .menu {
-                position: absolute;
-                top: 15%;
-                right: 0;
-                font-size: 3vw;
-                text-transform: uppercase;
+                display: none;
             }
         }
 
         .home-wrapper {
-            text-align: center;
-            margin-top: 30%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
             .home-content {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                
                 .home-title {
                     h1 {
-                        font-size: 7vw;
+                        font-size: 10vw;
                         color: #fff;
+                        font-weight: 700;
+                        padding: 30px;
                     }
-                    
+
                     h2 {
-                        font-size: 2.5vw;
-                        padding-top: 5%;
+                        font-size: 3vw;
                         color: #fff;
-                    }
-                }
-    
-                .home-btn {
-                    margin-top: 20%;
-                    font-size: 3vw;
-                    
-                    a {
-                        font-size: 2vw;
-                        text-align: center;
-                        padding: 15px 50px;
-                        background-color: #fff;
-                        border-radius: 25px;
-                        box-shadow: 0px 10px 40px 0 rgba(54, 54, 54, 0.15);
-                        color: #d90647;
                     }
                 }
             }
 
             .home-image {
-                margin-top: 25%;
-                z-index: 1;
-
+                padding-top: 50px;
                 img {
                     width: 50%;
                 }
@@ -221,6 +104,15 @@ ul, li {
     }
 
     .message {
-        
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    
+        .message-wrapper {
+            
+        }
     }
 }
